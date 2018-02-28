@@ -4,18 +4,12 @@ import isumi.datastruct.MyIterator;
 
 public abstract class MyAbstractList<E> implements MyList<E> {
     public MyIterator<E> iterator() {
-        return null;
+        return new Itr();
     }
 
 
 
-
-
-
-
-
-
-    class Itr implements MyIterator<E>{
+    class Itr implements MyIterator{
         int cursor = 0;
 
         public boolean hasNext() {
